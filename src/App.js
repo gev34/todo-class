@@ -20,6 +20,7 @@ export default class App extends React.Component {
         <button onClick={() => {
           this.state.arrOfTodos.push(this.state.todos)
           this.setState({addTodo : true}) 
+         // console.log(this.state.arrOfTodos);
         }}>Add</button>
         {this.state.addTodo && <AddTodo addTodo = {this.state.addTodo} arrOfTodos = {this.state.arrOfTodos}/>}
       </div>
