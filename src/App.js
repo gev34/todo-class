@@ -31,7 +31,6 @@ export default class App extends React.Component {
               );
             }
             this.setState({ addTodo: true });
-                  console.log(this.state.arrOfTodos);
           }}
         >
           Add
@@ -41,7 +40,7 @@ export default class App extends React.Component {
             addTodo={this.state.addTodo}
             arrOfTodos={this.state.arrOfTodos}
             state={this.state}
-            setState = {this.setState}
+            onClick = {(val) => this.setState({arrOfTodos: val})}
           />
         )}
       </div>

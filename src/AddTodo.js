@@ -5,8 +5,6 @@ export default class AddTodo extends React.Component {
     super(props);
   }
   render() {
-   // this.props.addTodo = false;
-   //console.log(this.props.arrOfTodos);
     return (
       <div>
         {this.props.arrOfTodos.map((todo , index) => {
@@ -15,10 +13,7 @@ export default class AddTodo extends React.Component {
               <input type = 'checkbox'/>
             {todo.todo}
             <button onClick={() => {
-              this.props.setState({arrOfTodos: ['ad']})
-             // console.log(this.props.arrOfTodos);
-           //  this.props.state.arrOfTodos = this.props.state.arrOfTodos.filter((todos) => todos !== todo)
-           //  console.log(this.props.state.arrOfTodos)
+            this.props.onClick( this.props.state.arrOfTodos.filter((todos) => todos.id !== todo.id))       
             }}>x</button>
           </div>
           )
